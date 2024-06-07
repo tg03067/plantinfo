@@ -9,5 +9,5 @@ import java.util.List;
 @Mapper
 public interface WebClientPlantFloatingMapper {
     int insItem(PlantSatelliteGetReq p);
-    int insTestInfo(List<PlantFloatingEntity> p);
+    int insFloatingPlant(List<PlantFloatingEntity> p);
 }

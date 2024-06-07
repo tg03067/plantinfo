@@ -8,6 +8,6 @@ import java.util.List;
 
 @Mapper
 public interface WebClientOutPlantMapper {
-    int insItem(OutPlantGetReq p);
-    int insTestInfo(List<OutPlantEntity> p);
+    int insOut(OutPlantGetReq p);
+    int insOutPlant(List<OutPlantEntity> p);
 }

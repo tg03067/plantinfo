@@ -35,7 +35,7 @@ public class WebClientPlantRareController {
 
     @PostMapping
     public ResultDto<Integer> postPlant(@RequestBody PlantSatelliteGetReq q){
-        int result = service.insTest(q);
+        int result = service.insRarePlant(q);
         return ResultDto.<Integer>builder().
                 status(HttpStatus.OK).
                 message(HttpStatus.OK.toString()).

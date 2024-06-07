@@ -9,5 +9,5 @@ import java.util.List;
 @Mapper
 public interface WebClientPlantFolkloreMapper {
     int insItem(PlantFolkloreGetReq p);
-    int insTestInfo(List<PlantFolkloreEntity> p);
+    int insFolklorePlant(List<PlantFolkloreEntity> p);
 }

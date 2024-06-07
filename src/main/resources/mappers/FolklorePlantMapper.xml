@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.webclientPlant.folklore.WebClientPlantFolkloreMapper">
+
+    <insert id="insFolklorePlant">
+        INSERT INTO folklore ( img_url , kor_nm , flplt_ara_no, flplt_id )
+        VALUES
+        <foreach collection="p" item="item" separator=",">
+            (
+            #{item.imgUrl}
+            , #{item.korNm}
+            , #{item.flpltAraNo}
+            , #{item.flpltId}
+            )
+        </foreach>
+    </insert>
+
+</mapper>

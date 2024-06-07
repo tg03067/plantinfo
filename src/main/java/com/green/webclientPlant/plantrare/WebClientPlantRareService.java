@@ -76,10 +76,10 @@ public class WebClientPlantRareService {
         return testList != null ? testList : Collections.emptyList();
     }
 
-    public int insTest(PlantSatelliteGetReq p) {
+    public int insRarePlant(PlantSatelliteGetReq p) {
         List<PlantRareEntity> list = getPlant(p);
         int result = 0;
-        result = mapper.insTestInfo(list);
+        result = mapper.insRarePlant(list);
         return result;
     }
 }

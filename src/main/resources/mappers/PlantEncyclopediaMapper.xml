@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.webclientPlant.plantencyclopedia.WebClientPlantEncyclopediaMapper">
+
+    <insert id="insPlantEncyclopedia">
+        INSERT INTO plantencyclopedia ( img_url , plantGnrlNm , plantPilbkNo )
+        VALUES
+        <foreach collection="p" item="item" separator=",">
+            (
+            #{item.imgUrl}
+            , #{item.plantGnrlNm}
+            , #{item.plantPilbkNo}
+            )
+        </foreach>
+    </insert>
+
+</mapper>

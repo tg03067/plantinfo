@@ -34,8 +34,9 @@ public class WebClientOutPlantController {
     }
 
     @PostMapping
+    @Operation(summary = "외래식물정보 등록")
     public ResultDto<Integer> postPlant(@RequestBody OutPlantGetReq q){
-        int result = service.insTest(q);
+        int result = service.insOutPlant(q);
         return ResultDto.<Integer>builder().
                 status(HttpStatus.OK).
                 message(HttpStatus.OK.toString()).

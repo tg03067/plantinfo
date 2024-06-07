@@ -34,8 +34,9 @@ public class WebClientPlantFloatingController {
     }
 
     @PostMapping
-    public ResultDto<Integer> postPlant(@RequestBody PlantSatelliteGetReq q){
-        int result = service.insTest(q);
+    @Operation(summary = "부유식물정보 등록")
+    public ResultDto<Integer> insFloatingPlant(@RequestBody PlantSatelliteGetReq q){
+        int result = service.insFloatingPlant(q);
         return ResultDto.<Integer>builder().
                 status(HttpStatus.OK).
                 message(HttpStatus.OK.toString()).

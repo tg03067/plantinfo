@@ -9,5 +9,5 @@ import java.util.List;
 @Mapper
 public interface WebClientPlantEncyclopediaMapper {
     int insItem(PlantEncyclopediaGetReq p);
-    int insTestInfo(List<PlantEncyclopediaEntity> p);
+    int insPlantEncyclopedia(List<PlantEncyclopediaEntity> p);
 }

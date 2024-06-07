@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.green.webclientPlant.outpatient.model.OutPlantEntity;
 import com.green.webclientPlant.outpatient.model.OutPlantGetReq;
 import io.netty.channel.ChannelOption;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,6 +25,7 @@ import java.util.List;
 
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class WebClientOutPlantService {
     private final WebClient webClient;
     private final String key;
@@ -76,10 +78,9 @@ public class WebClientOutPlantService {
         return testList != null ? testList : Collections.emptyList();
     }
 
-    public int insTest(OutPlantGetReq p) {
+    public int insOutPlant(OutPlantGetReq p) {
         List<OutPlantEntity> list = getPlant(p);
-        int result = 0;
-        result = mapper.insTestInfo(list);
+        int result = mapper.insOutPlant(list);;
         return result;
     }
 }

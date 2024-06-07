@@ -76,10 +76,10 @@ public class WebClientPlantFolkloreService {
         return testList != null ? testList : Collections.emptyList();
     }
 
-    public int insTest(PlantFolkloreGetReq p) {
+    public int insFolklorePlant(PlantFolkloreGetReq p) {
         List<PlantFolkloreEntity> list = getPlant(p);
         int result = 0;
-        result = mapper.insTestInfo(list);
+        result = mapper.insFolklorePlant(list);
         return result;
     }
 }

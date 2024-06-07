@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.green.webclientPlant.floating.WebClientPlantFloatingMapper">
+
+    <insert id="insFloatingPlant">
+        INSERT INTO floating ( img_url , plant_gnrl_nm , plant_scnm_id,  plant_specs_id)
+        VALUES
+        <foreach collection="p" item="item" separator=",">
+            (
+            #{item.imgUrl}
+            , #{item.plantGnrlNm}
+            , #{item.plantScnmId}
+            , #{item.plantSpecsId}
+            )
+        </foreach>
+    </insert>
+
+</mapper>

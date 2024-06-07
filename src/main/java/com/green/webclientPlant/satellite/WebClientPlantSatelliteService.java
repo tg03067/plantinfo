@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import org.springframework.stereotype.Service;
@@ -76,10 +77,10 @@ public class WebClientPlantSatelliteService {
         return testList != null ? testList : Collections.emptyList();
     }
 
-    public int insTest(PlantSatelliteGetReq p) {
+    public int insPlantSatellite(PlantSatelliteGetReq p) {
         List<PlantSatelliteEntity> list = getPlant(p);
         int result = 0;
-        result = mapper.insTestInfo(list);
+        result = mapper.insPlantSatellite(list);
         return result;
     }
 }

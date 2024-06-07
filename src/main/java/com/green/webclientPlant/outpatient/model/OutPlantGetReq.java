@@ -1,9 +1,11 @@
 package com.green.webclientPlant.outpatient.model;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
 public class OutPlantGetReq {
     @Schema(defaultValue = "json")
     private String type;

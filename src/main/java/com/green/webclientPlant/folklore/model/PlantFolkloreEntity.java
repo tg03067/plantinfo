@@ -10,5 +10,4 @@ public class PlantFolkloreEntity {
     private String korNm;
     private String flpltAraNo;
     private String flpltId;
-    private String flpltNm;
 }

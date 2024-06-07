@@ -34,6 +34,7 @@ public class WebClientPlantEncyclopediaController {
     }
 
     @PostMapping
+    @Operation(summary = "식물도감등록")
     public ResultDto<Integer> postPlant(@RequestBody PlantEncyclopediaGetReq q){
         int result = service.insTest(q);
         return ResultDto.<Integer>builder().

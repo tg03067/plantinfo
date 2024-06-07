@@ -34,8 +34,9 @@ public class WebClientPlantFolkloreController {
     }
 
     @PostMapping
+    @Operation(summary = "민속식물정보 등록")
     public ResultDto<Integer> postPlant(@RequestBody PlantFolkloreGetReq q){
-        int result = service.insTest(q);
+        int result = service.insFolklorePlant(q);
         return ResultDto.<Integer>builder().
                 status(HttpStatus.OK).
                 message(HttpStatus.OK.toString()).

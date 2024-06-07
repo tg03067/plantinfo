@@ -34,8 +34,9 @@ public class WebClientPlantSatelliteController {
     }
 
     @PostMapping
+    @Operation(summary = "식물종자정보 등록")
     public ResultDto<Integer> postPlant(@RequestBody PlantSatelliteGetReq q){
-        int result = service.insTest(q);
+        int result = service.insPlantSatellite(q);
         return ResultDto.<Integer>builder().
                 status(HttpStatus.OK).
                 message(HttpStatus.OK.toString()).

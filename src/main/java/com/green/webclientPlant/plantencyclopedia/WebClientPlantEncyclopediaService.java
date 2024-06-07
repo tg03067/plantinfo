@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.green.webclientPlant.plantencyclopedia.model.PlantEncyclopediaEntity;
 import com.green.webclientPlant.plantencyclopedia.model.PlantEncyclopediaGetReq;
 import io.netty.channel.ChannelOption;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,6 +25,7 @@ import java.util.List;
 
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class WebClientPlantEncyclopediaService {
     private final WebClient webClient;
     private final String key;
@@ -79,7 +81,7 @@ public class WebClientPlantEncyclopediaService {
     public int insTest(PlantEncyclopediaGetReq p) {
         List<PlantEncyclopediaEntity> list = getPlant(p);
         int result = 0;
-        result = mapper.insTestInfo(list);
+        result = mapper.insPlantEncyclopedia(list);
         return result;
     }
 }

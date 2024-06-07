@@ -76,10 +76,10 @@ public class WebClientPlantFloatingService {
         return testList != null ? testList : Collections.emptyList();
     }
 
-    public int insTest(PlantSatelliteGetReq p) {
+    public int insFloatingPlant(PlantSatelliteGetReq p) {
         List<PlantFloatingEntity> list = getPlant(p);
         int result = 0;
-        result = mapper.insTestInfo(list);
+        result = mapper.insFloatingPlant(list);
         return result;
     }
 }
